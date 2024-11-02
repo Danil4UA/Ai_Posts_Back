@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
     credentials: true,
-    origin:["http://localhost:5173"]
+    origin:["https://ai-posts-front.onrender.com"]
 }))
 
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT) : 5001;
