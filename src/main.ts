@@ -6,7 +6,7 @@ import userProfileRouter from "./routes/userProfileRoutes"
 import cookieParser from "cookie-parser"
 import cors from "cors"
 import path from 'path';
-
+import { API_BASE_URL_FRONT } from "./apiClient";
 import 'dotenv/config';
 const app: Application = express();
 
@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
     credentials: true,
-    origin:["https://ai-posts-front.onrender.com"]
+    origin:[`${API_BASE_URL_FRONT}`]
 }))
 
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT) : 5001;
